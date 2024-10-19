@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Modal from './Modal';  // Import the Modal component
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app-container">
+      <header className="app-header">
+        <h1 className="title">Smart Traffic Management System</h1>
       </header>
+
+      <main className="app-main">
+        <p className="description">
+          Optimize traffic flow, reduce congestion, and prioritize emergency routes with AI-powered management.
+        </p>
+        <button className="try-now-btn" onClick={handleOpenModal}>Try Now</button>
+      </main>
+
+      <footer className="app-footer">
+        <p>&copy; 2024 Smart Traffic Management. All rights reserved.</p>
+      </footer>
+
+      {/* Render Modal */}
+      {isModalOpen && <Modal onClose={handleCloseModal} />}
     </div>
   );
 }

@@ -36,3 +36,77 @@
     transform: rotate(360deg);
   }
 }
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.app-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 600px;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Header */
+.app-header {
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Main Section */
+.app-main {
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.try-now-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.try-now-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Footer */
+.app-footer {
+  padding-top: 20px;
+  border-top: 1px solid #ecf0f1;
+  font-size: 0.9rem;
+  color: #bdc3c7;
+}
